@@ -18,9 +18,11 @@ QT += network
 
 SOURCES += \
     main.cpp \
+    test.cpp \
     widget.cpp
 
 HEADERS += \
+    test.h \
     widget.h
 
 FORMS += \
