@@ -1,5 +1,5 @@
 #include "widget.h"
-#include "ui_widget.h"
+#include "./ui_widget.h"
 
 #include <QDesktopServices>
 #include <QUrl>
@@ -15,6 +15,8 @@
 #include <QtNetwork>
 #include <qtextcodec.h>
 #include <QFileInfo>
+
+#include <QDebug>
 
 QString fileName;
 QString binDir=QDir::currentPath()+"/bin"; //ÓÃÓÚÅĞ¶ÏbinÎÄ¼ş¼ĞÊÇ·ñ´æÔÚ
@@ -96,6 +98,8 @@ void Widget::on_openPath_clicked() //Ñ¡ÔñÓÎÏ·Â·¾¶
         QVariant VarPath(openFiles);
         setting.setValue("LastFilePath", VarPath);//½«Â·¾¶±£´æÖÁSetting.ini ·½±ãÏÂ´Îµ÷ÓÃ
     }
+
+    qDebug()<<"hello";
 }
 
 void Widget::onlineVersionReplyFinished(QNetworkReply *reply) //ÍøÂç×îĞÂ²¹¶¡°æ±¾ºÅ±£´æÖÁSetting
@@ -146,6 +150,8 @@ void Widget::updateDataReadProgress(qint64 bytesRead, qint64 totalBytes) //ÏÂÔØ½
 {
     ui->progressBar->setMaximum(totalBytes);
     ui->progressBar->setValue(bytesRead);
+
+        qDebug()<<"hello";
 }
 
 void Widget::httpFinished()  //ÏÂÔØÍê³É
@@ -184,6 +190,8 @@ void Widget::httpFinished()  //ÏÂÔØÍê³É
     ui->tipVersion->setText(version); //¸üĞÂUIÏÔÊ¾
 
     QMessageBox::information(this,codec->toUnicode("ÏµÍ³ÌáÊ¾"),codec->toUnicode("ÏÂÔØÍê³É"), QMessageBox::Ok);
+
+        qDebug()<<"hello";
 }
 
 void Widget::on_online_clicked() //ÏÂÔØ»ò¸üĞÂ ĞÂ²¹¶¡
@@ -205,6 +213,8 @@ void Widget::on_online_clicked() //ÏÂÔØ»ò¸üĞÂ ĞÂ²¹¶¡
     startReauest(url);
     ui->progressBar->setValue(0);
     ui->progressBar->show();
+
+        qDebug()<<"hello";
 }
 
 void Widget::on_TieBa_clicked()
@@ -234,4 +244,6 @@ void Widget::on_renew_clicked()
     ui->tipOnlineVersion->setText(onlineVersion);
     ui->tipVersion->setText(version);
     ui->tip->setText(tip);
+
+        qDebug()<<"hello";
 }

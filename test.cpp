@@ -1,8 +1,8 @@
 #include "test.h"
+#include <QDebug>
 
-#include "QDebug"
-
-Test::Test()
+Test::Test(QObject *parent)
+    : QObject{parent}
 {
-    qDebug()<<"helo";
+    qDebug()<<"hell";
 }
