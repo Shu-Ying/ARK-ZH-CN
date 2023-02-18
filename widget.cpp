@@ -99,7 +99,8 @@ void Widget::on_openPath_clicked() //Ñ¡ÔñÓÎÏ·Â·¾¶
         setting.setValue("LastFilePath", VarPath);//½«Â·¾¶±£´æÖÁSetting.ini ·½±ãÏÂ´Îµ÷ÓÃ
     }
 
-    qDebug()<<"helloe";
+
+    qDebug()<<"hellos";
 }
 
 void Widget::onlineVersionReplyFinished(QNetworkReply *reply) //ÍøÂç×îĞÂ²¹¶¡°æ±¾ºÅ±£´æÖÁSetting
@@ -151,7 +152,8 @@ void Widget::updateDataReadProgress(qint64 bytesRead, qint64 totalBytes) //ÏÂÔØ½
     ui->progressBar->setMaximum(totalBytes);
     ui->progressBar->setValue(bytesRead);
 
-        qDebug()<<"helloe";
+
+    qDebug()<<"helloe";
 }
 
 void Widget::httpFinished()  //ÏÂÔØÍê³É
@@ -191,7 +193,8 @@ void Widget::httpFinished()  //ÏÂÔØÍê³É
 
     QMessageBox::information(this,codec->toUnicode("ÏµÍ³ÌáÊ¾"),codec->toUnicode("ÏÂÔØÍê³É"), QMessageBox::Ok);
 
-        qDebug()<<"helloe";
+    qDebug()<<"helloe";
+    qDebug()<<"hellos";
 }
 
 void Widget::on_online_clicked() //ÏÂÔØ»ò¸üĞÂ ĞÂ²¹¶¡
@@ -214,7 +217,6 @@ void Widget::on_online_clicked() //ÏÂÔØ»ò¸üĞÂ ĞÂ²¹¶¡
     ui->progressBar->setValue(0);
     ui->progressBar->show();
 
-        qDebug()<<"helloe";
 }
 
 void Widget::on_TieBa_clicked()
@@ -245,5 +247,4 @@ void Widget::on_renew_clicked()
     ui->tipVersion->setText(version);
     ui->tip->setText(tip);
 
-        qDebug()<<"helloe";
 }
